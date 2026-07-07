@@ -1,0 +1,10 @@
+
+> dhrub-baraili-portfolio@1.0.0 start
+> next start --port 3001
+
+   ▲ Next.js 15.5.7
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.15:3001
+
+ ✓ Starting...
+ ✓ Ready in 1181ms
