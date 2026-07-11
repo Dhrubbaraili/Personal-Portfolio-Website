@@ -46,15 +46,16 @@ export default async function ContactPage({
           </CardContent>
         </Card>
 
-        <Card className="relative overflow-hidden border-white/70 bg-white/50">
+        <Card className="group relative overflow-hidden border-white/70 bg-white/50 transition duration-300 hover:shadow-[0_0_0_1px_rgba(47,125,50,.20),0_0_0_10px_rgba(47,125,50,.06),0_30px_80px_rgba(47,125,50,.16)]">
           <div className="absolute inset-0 bg-gradient-to-br from-[#4caf50]/10 via-transparent to-white/0" />
           <CardContent className="relative h-full min-h-[700px] p-0">
+            <div className="pointer-events-none absolute inset-3 z-10 rounded-[28px] border border-transparent transition duration-300 group-hover:border-[#2f7d32]/35 group-hover:shadow-[0_0_0_1px_rgba(47,125,50,.12),0_0_40px_rgba(47,125,50,.16)]" />
             <Image
               src={visuals.contact}
               alt="Business consultation and client meeting illustration"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center"
+              className="object-cover object-center transition duration-300 group-hover:scale-[1.01]"
               priority
             />
           </CardContent>

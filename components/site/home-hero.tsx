@@ -74,19 +74,20 @@ export function HomeHero() {
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative min-h-[600px] md:min-h-[620px]"
+          className="group relative min-h-[600px] md:min-h-[620px]"
         >
           <div className="absolute inset-x-0 top-14 mx-auto h-[520px] w-[520px] rounded-full bg-primary/15 blur-3xl" />
           <div className="absolute inset-x-0 top-20 mx-auto h-[430px] w-[430px] rounded-full bg-[#b7e6bb]/45 blur-3xl animate-pulse" />
           <div className="absolute inset-0 flex items-end justify-center">
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full rounded-[36px] transition duration-300 group-hover:shadow-[0_0_0_1px_rgba(47,125,50,.20),0_0_0_10px_rgba(47,125,50,.06),0_30px_80px_rgba(47,125,50,.18)]">
+              <div className="pointer-events-none absolute inset-2 rounded-[30px] border border-transparent transition duration-300 group-hover:border-[#2f7d32]/35 group-hover:shadow-[0_0_0_1px_rgba(47,125,50,.12),0_0_40px_rgba(47,125,50,.18)]" />
               <Image
                 src={visuals.hero}
                 alt="Premium AI marketing and business growth illustration"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-contain object-bottom -translate-y-4 md:-translate-y-8 drop-shadow-[0_40px_90px_rgba(40,110,50,.22)]"
+                className="object-contain object-bottom -translate-y-4 md:-translate-y-8 drop-shadow-[0_40px_90px_rgba(40,110,50,.22)] transition duration-300 group-hover:drop-shadow-[0_40px_90px_rgba(47,125,50,.30)]"
               />
             </div>
           </div>

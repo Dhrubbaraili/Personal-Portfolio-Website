@@ -3,7 +3,7 @@ export const site = {
   title: "AI Marketing Expert & Consultant",
   description:
     "Premium AI-inspired portfolio where I help businesses grow with AI-powered marketing, automation, SEO, branding, and digital transformation.",
-  url: "https://dhrubbaraili.com",
+  url: "https://dhrubbaraili.com.np",
   email: "dmsmbaraili@gmail.com",
   phone: "9841879782",
   location: "Kathmandu, Nepal",

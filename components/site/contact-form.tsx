@@ -24,7 +24,6 @@ type FormValues = z.infer<typeof schema>;
 
 export function ContactForm({ initialSubmitted = false }: { initialSubmitted?: boolean }) {
   const [submitted, setSubmitted] = useState(initialSubmitted);
-  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const {
@@ -45,7 +44,6 @@ export function ContactForm({ initialSubmitted = false }: { initialSubmitted?: b
 
   const onSubmit = handleSubmit(() => {
     setSubmitted(false);
-    setSubmitError(null);
     setIsSubmitting(true);
     const nextInput = formRef.current?.querySelector<HTMLInputElement>('input[name="_next"]');
     if (nextInput && typeof window !== "undefined") {
@@ -112,11 +110,6 @@ export function ContactForm({ initialSubmitted = false }: { initialSubmitted?: b
         {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
         Send Message
       </Button>
-      {submitError ? (
-        <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-          {submitError}
-        </div>
-      ) : null}
       <AnimatePresence>
         {submitted ? (
           <motion.div
